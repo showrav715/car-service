@@ -158,7 +158,7 @@
 </template>
 <script setup>
 import { ref, onMounted, inject, watch } from "vue";
-import ValidHtml from "../components/validHtml.vue";
+import ValidHtml from "../components/ValidHtml.vue";
 import myaxios from "../myaxios";
 import { useRoute } from "vue-router";
 const service = ref({});
