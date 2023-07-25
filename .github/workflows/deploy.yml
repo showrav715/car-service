@@ -34,8 +34,6 @@ jobs:
           </IfModule>" > .htaccess
           chmod 644 .htaccess
 
-          
-       
       - name: Deploy to Subdomain
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
 
@@ -44,5 +42,3 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           passive: true
-
-    
