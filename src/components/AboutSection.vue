@@ -31,7 +31,7 @@
   </section>
 </template>
 <script setup>
-import validHtml from "../components/validHtml.vue";
+import validHtml from "../components/ValidHtml.vue";
 import aboutShape from '../assets/images/about-shape.png';
 const { about } = defineProps(["about"]);
 </script>
