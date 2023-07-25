@@ -23,14 +23,14 @@ jobs:
 
       - name: Create htaccess file
         run: |
-        
-          echo "<IfModule mod_rewrite.c>\n\
-          RewriteEngine On\n\
-          RewriteBase /\n\
-          RewriteRule ^index\.html$ - [L]\n\
-          RewriteCond %{REQUEST_FILENAME} !-f\n\
-          RewriteCond %{REQUEST_FILENAME} !-d\n\
-          RewriteRule . /index.html [L]\n\
+
+          echo "<IfModule mod_rewrite.c>
+          RewriteEngine On
+          RewriteBase /
+          RewriteRule ^index\.html$ - [L]
+          RewriteCond %{REQUEST_FILENAME} !-f
+          RewriteCond %{REQUEST_FILENAME} !-d
+          RewriteRule . /index.html [L]
           </IfModule>" > .htaccess
           chmod 644 .htaccess
 
