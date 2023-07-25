@@ -13,10 +13,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Build Vue.js project
-        run: |
-          npm install
-          npm run build
+      # - name: Build Vue.js project
+      #   run: |
+      #     npm install
+      #     npm run build
 
       - name: Move dist files to root
         run: mv dist/* ./

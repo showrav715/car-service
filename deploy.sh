@@ -1,4 +1,7 @@
 
+npm install
+npm run build
+
 cat <<EOT > .htaccess
 <IfModule mod_rewrite.c>
   RewriteEngine On
