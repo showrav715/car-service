@@ -31,7 +31,9 @@ jobs:
           RewriteCond %{REQUEST_FILENAME} !-f\n\
           RewriteCond %{REQUEST_FILENAME} !-d\n\
           RewriteRule . /index.html [L]\n\
-          </IfModule>" > chmod 644 /.htaccess
+          </IfModule>" > .htaccess
+          chmod 644 .htaccess
+
           
        
       - name: Deploy to Subdomain
