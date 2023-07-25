@@ -13,13 +13,25 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # - name: Build Vue.js project
-      #   run: |
-      #     npm install
-      #     npm run build
+      - name: Build Vue.js project
+        run: |
+          npm install
+          npm run build
 
       - name: Move dist files to root
         run: mv dist/* ./
+
+      - name: Create htaccess file
+        run: |
+          echo "<IfModule mod_rewrite.c>\n\
+          RewriteEngine On\n\
+          RewriteBase /\n\
+          RewriteRule ^index\.html$ - [L]\n\
+          RewriteCond %{REQUEST_FILENAME} !-f\n\
+          RewriteCond %{REQUEST_FILENAME} !-d\n\
+          RewriteRule . /index.html [L]\n\
+          </IfModule>" > /.htaccess
+        
 
       - name: Deploy to Subdomain
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -31,4 +43,4 @@ jobs:
           passive: true
 
       - name: Deploy to Subdomain
-        run : deploy.sh
+        run: deploy.sh
