@@ -43,5 +43,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           passive: true
 
-      - name: Deploy to Subdomain
-        run: deploy.sh
+    
